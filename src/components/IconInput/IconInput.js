@@ -39,11 +39,13 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.label`
+  display: block;
   width: var(--width);
   padding: 4px 0px;
   border-bottom: 1px solid ${COLORS.black};
   position: relative;
+  color: ${COLORS.gray700};
 `;
 
 const IconWrapper = styled.div`
@@ -68,7 +70,7 @@ const NativeInput = styled.input`
   font-size: ${(p) => p.sizes.fontSize};
 
   font-weight: 700;
-  color: ${COLORS.gray700};
+  color: inherit;
 
   &::placeholder {
     color: ${COLORS.gray500};
